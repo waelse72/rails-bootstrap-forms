@@ -109,7 +109,7 @@ module BootstrapForm
     def fields_for(record_name, record_object = nil, fields_options = {}, &block)
       fields_options, record_object = record_object, nil if record_object.is_a?(Hash) && record_object.extractable_options?
       fields_options[:style] ||= options[:style]
-      fields_options[:left] = (fields_options.include?(:left)) ? fields_options[:left] + " #{label_class}" : options[:left]
+      fields_options[:left] = (fields_options.include?(:left)) ? "#{fields_options[:left]} #{label_class}" : options[:left]
       fields_options[:right] ||= options[:right]
       super(record_name, record_object, fields_options, &block)
     end
