@@ -368,10 +368,10 @@ classes.
 
 #### Optional icons (feedback support)
 
-If you want to display error glyph on the input field with error you can specify the `has_feedback` option.
+If you want to display error glyph on the input field with error you can specify the `optional_icons` option.
 
 ```erb
-<%= bootstrap_form_for(@user, has_feedback: true) do |f| %>
+<%= bootstrap_form_for(@user, optional_icons: true) do |f| %>
   <%= f.email_field :email %>
 <% end %>
 ```
